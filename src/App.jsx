@@ -11,10 +11,12 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Quran from './Components/Quran/Quran';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import Shikh from './Components/Shikh/Shikh';
 function App() {
   const [scroll, setScroll] = useState(0);
   const [theme, colorMode] = useMode();
   const [sora, setSora] = useState([]);
+  const [name, setName] = useState([]);
   window.onscroll = function () {
     setScroll(scrollY);
   };
@@ -35,10 +37,13 @@ function App() {
    <Routes>
     <Route path='/' element={<Main  setSora={setSora}/>} />
     <Route path='main' element={<Main setSora={setSora} />} />
-    <Route path='quran' element={<Quran sora={sora} />} >
-    <Route path=':id' element={<Quran sora={sora} />} />
+    <Route path='quran' element={<Quran sora={sora} name={name} setName={setName} />} >
+   
+    <Route path=':id' element={<Quran sora={sora} name={name} setName={setName} />} />
+    
 
-    </Route>
+    </Route> 
+    <Route path=':shikh/:id' element={<Shikh sora={sora}  />} /> 
     <Route path='photo' element={<Photo />} />
     <Route path='info' element={<Info />} />
     {/* <Route path='info' element={<Info />} /> */}

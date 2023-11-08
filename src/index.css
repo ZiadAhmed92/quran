@@ -99,3 +99,20 @@
   align-items: center;
 
 }
+.btn-shikh{
+  padding: 10px;
+  margin: 5px 29px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 1.5em;
+}
+.btn-shikh:hover{
+ color: red;
+
+}
+audio{
+  width: 90%;
+  margin: auto;
+  color: red;
+
+}
