@@ -1,0 +1,31 @@
+.header{
+    margin: 5px 10px;
+    border-radius: 20px;
+    padding: 10px;
+    align-items: center;
+    box-shadow: 1px 1px 10px;
+}
+.img{
+    border-radius: 50%;
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+   
+
+}
+ul li{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,66 @@
+
+import { useState } from 'react';
+import './App.css'
+import { Route, Routes } from 'react-router-dom';
+import Main from './Components/Main/Main';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+import Photo from './Components/Photo/Photo';
+import Info from './Components/Information/Info';
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { ColorModeContext, useMode } from "./theme";
+import Quran from './Components/Quran/Quran';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+function App() {
+  const [scroll, setScroll] = useState(0);
+  const [theme, colorMode] = useMode();
+  const [sora, setSora] = useState([]);
+  window.onscroll = function () {
+    setScroll(scrollY);
+  };
+
+  return (
+   <>
+    <ColorModeContext.Provider
+      // @ts-ignore
+      value={colorMode}
+    >
+      <ThemeProvider
+        // @ts-ignore
+        theme={theme}
+      >
+        <CssBaseline />
+<Header/>
+
+   <Routes>
+    <Route path='/' element={<Main  setSora={setSora}/>} />
+    <Route path='main' element={<Main setSora={setSora} />} />
+    <Route path='quran' element={<Quran sora={sora} />} >
+    <Route path=':id' element={<Quran sora={sora} />} />
+
+    </Route>
+    <Route path='photo' element={<Photo />} />
+    <Route path='info' element={<Info />} />
+    {/* <Route path='info' element={<Info />} /> */}
+   </Routes>
+
+   {/* <Footer/> */}
+
+   <a href="#home">
+        {" "}
+        <div
+          className={` arrowUp position-fixed ${
+            scroll >= 500 ? " d-flex" : "d-none"
+          }`}
+        >
+       
+       <KeyboardArrowUpIcon  className=" fa-solid fa-arrow-up"/>  
+        </div>
+      </a>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
+   </>
+  )
+}
+
+export default App
