@@ -49,7 +49,7 @@ function App() {
     {/* <Route path='info' element={<Info />} /> */}
    </Routes>
 
-   {/* <Footer/> */}
+   <Footer/>
 
    <a href="#home">
         {" "}

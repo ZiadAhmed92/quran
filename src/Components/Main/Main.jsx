@@ -16,19 +16,22 @@ const Main = ({setSora}) => {
   }, []);
   return (
     <div className="container">
-      <div className="row">
+      <div className="row pb-5 gy-3">
+        <div className="col-md-12 text-center py-3">
+          <h1>بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
+        </div>
         {data.map((item) => (
-          <div className="col-md-2  sora-main p-1 border" key={item.number}>
+          <div className="col-md-2  " key={item.number}>
             <Link to={`/quran/${item.number}`}>
               {" "}
-              <div onClick={()=>setSora(item)}>
+              <div className="sora-main p-1 border" onClick={()=>setSora(item)}>
                 <div className="flex px-2">
                   <FavoriteBorderIcon />
                   <Avatar sx={{ width: "30px", height: "30px" }}>
                     {item.number}
                   </Avatar>
                 </div>
-                <Typography textAlign={"end"} className="py-2">
+                <Typography textAlign={"end"} className="py-2 fw-bold">
                   {item.name}
                 </Typography>
               </div>
