@@ -1,3 +1,9 @@
+ .font{
+  color: bl;
+ 
+ }
+ 
+
  /* Scroll bar */
  ::-webkit-scrollbar {
   width: 0.7rem;
@@ -48,6 +54,9 @@
   -o-transition:1s ease;
 }
 @media only screen and (max-width: 500px) {
+  .img1{
+    width: 100% !important;
+  }
 .arrowUp{
   
   width: 30px;
@@ -63,7 +72,7 @@
   padding: 0 20px ;
   
 }
-.col-md-2{
+.col-md-4{
   border-radius: 20px !important;
   margin: 5px 0;
   padding: 0 5px;
@@ -71,15 +80,23 @@
 }
 .quran-main{
   border-radius: 20px;
-  margin: 20px 10px 0;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
+}
+.quran-main{
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
 }
 /* footer */
 .footer{
   
  border: 1px solid rgb(49, 47, 47) ;
  background:inherit;
-  position: relative;
+  position: static;
   bottom: 0;
   width: 93%;
   text-align: center;
@@ -90,18 +107,51 @@
 
 /* main */
 .sora-main{
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.sora-main{
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
 }
 .sora-main:hover,.name-quran:hover{
-  background: #8a8787;
+  /* background: #8a8787; */
+  border: 1px solid #1cd0da !important;
 
 }
+.ayat,.avatar{
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.sora-main:hover .ayat{
+  color: #1cd0da;
+}
+.sora-main:hover .avatar{
+  background: #1cd0da;
+}
 .name-quran{
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
   align-items: center;
-
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
 }
 .btn-shikh{
   padding: 10px;
@@ -114,12 +164,7 @@
  color: red;
 
 }
-audio{
-  width: 90%;
-  margin: auto;
-  color: red;
 
-}
 /* info */
 .sura{
   border: 1px solid;
@@ -250,9 +295,9 @@ padding: 5px;
 }
 
 .theme-switch__moon {
+transform: translateX(100%);
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
-  transform: translateX(100%);
   width: 100%;
   height: 100%;
   background-color: var(--moon-bg);
@@ -263,6 +308,8 @@ padding: 5px;
   -o-transition: var(--transition);
   transition: var(--transition);
   position: relative;
+  -moz-transform: translateX(1%);
+  -o-transform: translateX(1%);
 }
 
 .theme-switch__spot {
@@ -340,6 +387,8 @@ padding: 5px;
   -webkit-transform: translate(0);
   -ms-transform: translate(0);
   transform: translate(0);
+  -moz-transform: translate(0);
+  -o-transform: translate(0);
 }
 
 .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__clouds {

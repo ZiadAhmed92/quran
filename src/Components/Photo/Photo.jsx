@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const Photo = () => {
-  const [sura, setSura] = useState([]);
+const Photo = ({sura,setSura}) => {
+  
   let [pageNumber, setpageNumber] = useState(1);
 
   async function getSura(num) {

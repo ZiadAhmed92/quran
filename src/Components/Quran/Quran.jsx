@@ -1,4 +1,4 @@
-import { Avatar, Typography } from "@mui/material";
+import { Avatar, Box, Typography } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -22,15 +22,20 @@ const Quran = ({ sora, name, setName }) => {
         {" "}
         <div>
           <div className="flex px-2">
-            <FavoriteBorderIcon />
-            <Avatar sx={{ width: "30px", height: "30px" }}>
-              {sora.number}
-            </Avatar>
-          </div>
-          <Typography textAlign={"end"} className="fw-bold py-2">
+          <div className="flex fw-bold p-2 ayat">
+            <div className="mx-2 fs-3">آيات</div>     {sora.numberOfAyahs}  
+                  </div>
+            
+                  <Box flexGrow={1} />
+            <Typography textAlign={"end"} className="fw-bold mx-2 py-2">
             {sora.name} : سورة{" "}
             {sora.revelationType === "Meccan" ? " مكية" : "مدنى"}
           </Typography>
+          <Avatar className="avatar" sx={{ width: "30px", height: "30px" }}>
+              {sora.number}
+            </Avatar>
+          </div>
+          
         </div>
       </div>
       <div className="text-center py-3">
@@ -40,12 +45,14 @@ const Quran = ({ sora, name, setName }) => {
         <div className="row">
           {name.map((item, i) => (
             <div
-              className="name-quran col-md-3 text-center py-2 border my-2 "
+              className=" col-md-6 text-center   "
               key={i}
             >
-              <Link to={`/${item.identifier}/${id}`}>
+             <div className="name-quran border py-2  my-2">
+             <Link to={`/${item.identifier}/${id}`}>
                 <div>{item.name}</div>
               </Link>
+              </div>
             </div>
           ))}
         </div>

@@ -17,6 +17,7 @@ function App() {
   const [theme, colorMode] = useMode();
   const [sora, setSora] = useState([]);
   const [name, setName] = useState([]);
+  const [sura, setSura] = useState([]);
   window.onscroll = function () {
     setScroll(scrollY);
   };
@@ -43,8 +44,8 @@ function App() {
     
 
     </Route> 
-    <Route path=':shikh/:id' element={<Shikh sora={sora}  />} /> 
-    <Route path='photo' element={<Photo />} />
+    <Route path=':shikh/:id' element={<Shikh  sora={sora}  />} /> 
+    <Route path='photo' element={<Photo sura={sura} setSura={setSura} />} />
     <Route path='info' element={<Info />} />
     {/* <Route path='info' element={<Info />} /> */}
    </Routes>
