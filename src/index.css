@@ -56,6 +56,7 @@
 @media only screen and (max-width: 500px) {
   .img1{
     width: 100% !important;
+    
   }
 .arrowUp{
   
@@ -78,18 +79,17 @@
   padding: 0 5px;
   
 }
+
+}
 .quran-main{
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-}
-}
-.quran-main{
-  width: 90%;
-  margin: auto;
-  margin-top: 20px;
 }
 /* footer */
 .footer{

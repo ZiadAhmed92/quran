@@ -33,7 +33,7 @@ const Shikh = ({ sora }) => {
       <div className="btn-shikh" onClick={() => navigate(`/quran/${id}`)}>
         <ArrowBackIcon sx={{fontSize:"1.5em"}}/>
       </div>
-      <div className=" sora-main mx-5 quran-main p-3 border" key={sora.number}>
+      <div className=" sora-main quran-main p-3 border" key={sora.number}>
         {" "}
         <div>
           <div className="flex px-2">
@@ -55,7 +55,7 @@ const Shikh = ({ sora }) => {
       </div>
 
       <div className="text-center py-5  ">
-        <h4>
+        <h4 style={{textTransform:"capitalize"}}>
         {shikh.slice(3)} : الشيخ 
           
         </h4>
