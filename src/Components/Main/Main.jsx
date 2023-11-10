@@ -33,10 +33,7 @@ const Main = ({ setSora }) => {
 
         
 
-        <div className="col-md-12 text-center py-3">
-          <h1>بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
-         
-        </div>
+       
         {data.map((item) => (
           <div className="col-md-4  " key={item.number}>
             <Link to={`/quran/${item.number}`}>
