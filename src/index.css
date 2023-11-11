@@ -53,17 +53,8 @@
   -ms-transition:1s ease;
   -o-transition:1s ease;
 }
-/* navbar */
-.navbar{
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-}
-.text-header{
-  color: inherit ;
-}
+
+
 @media only screen and (max-width: 500px) {
   .img1{
     width: 100% !important;
@@ -193,8 +184,10 @@ ul a:hover{
 }
 .num-sura{
   border: 1px solid;
-padding: 5px;
-  border-radius: 50%;
+  font-size: .5em;
+  padding: 5px;
+  margin: 0 5px;
+
 }
 .directoin{
   direction: rtl;

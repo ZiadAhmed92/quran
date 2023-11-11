@@ -1,11 +1,9 @@
-import React from "react";
+
 import { useContext } from "react";
 import { ColorModeContext } from "../../theme";
-import { Avatar, Box, IconButton, useTheme } from "@mui/material";
+import { Avatar, useTheme } from "@mui/material";
 // @ts-ignore
 import img from "../../img/1.jpg";
-import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import "./Header.css";
 import { Link } from "react-router-dom";
 const Header = () => {
@@ -13,7 +11,7 @@ const Header = () => {
   const theme = useTheme();
   return (
     <>
-      <div className="px-2 mt-2 ">
+      <div className="px-2 mt-2 " id="home">
         <nav className="navbar navbar-expand-lg border  ">
           <div className="container-fluid">
             <Link to="/">
@@ -55,6 +53,9 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <Link to="info">Surah</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="juz">Juz</Link>
                 </li>
               </ul>
               <ul className="navbar-nav ms-auto m-2 mb-lg-0 text-center">

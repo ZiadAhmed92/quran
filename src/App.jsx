@@ -4,7 +4,6 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom';
 import Main from './Components/Main/Main';
 import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
 import Photo from './Components/Photo/Photo';
 import Info from './Components/Information/Info';
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -12,6 +11,9 @@ import { ColorModeContext, useMode } from "./theme";
 import Quran from './Components/Quran/Quran';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Shikh from './Components/Shikh/Shikh';
+import Juz from './Components/Juz/Juz';
+import Juzchild from './Components/Juz/juzchild';
+import Profile from './Components/Profile/Profile';
 function App() {
   const [scroll, setScroll] = useState(0);
   const [theme, colorMode] = useMode();
@@ -47,10 +49,15 @@ function App() {
     <Route path=':shikh/:id' element={<Shikh  sora={sora}  />} /> 
     <Route path='photo' element={<Photo sura={sura} setSura={setSura} />} />
     <Route path='info' element={<Info />} />
+    <Route path='juz' element={<Juz />} /> 
+    <Route path=':id' element={<Juzchild />}/>
+    <Route path='profile' element={<Profile />}/>
+
+   
     {/* <Route path='info' element={<Info />} /> */}
    </Routes>
 
-   <Footer/>
+   
 
    <a href="#home">
         {" "}
