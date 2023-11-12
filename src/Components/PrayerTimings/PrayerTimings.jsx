@@ -12,7 +12,7 @@ const PrayerTimings = () => {
       data: { data },
     } = await axios.get(
      
-      `http://api.aladhan.com/v1/timingsByCity?country=EG&city=${date}`
+      `http://api.aladhan.com/v1/timingsByCity?country=EG&city=cairo`
     );
     
     setData(data.timings);
