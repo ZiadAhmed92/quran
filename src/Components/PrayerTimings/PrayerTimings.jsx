@@ -12,7 +12,7 @@ const PrayerTimings = () => {
       data: { data },
     } = await axios.get(
      
-      `http://api.aladhan.com/v1/timingsByCity?country=EG&city=cairo`
+      `https://api.aladhan.com/v1/timingsByAddress?address=Cairo&method=8`
     );
     
     setData(data.timings);
@@ -23,7 +23,7 @@ const PrayerTimings = () => {
   } 
   useEffect(() => {
     getData();
-  }, [date]);
+  }, []);
   useEffect(() => {
     // تحديث الوقت والتاريخ كل ثانية
     const intervalId = setInterval(() => {
