@@ -116,6 +116,20 @@
     opacity: 1;
     transform: translate(-50%, -130%);
   }
+/* prayerTimings */
+td,th{
+  background: inherit !important;
+  color: inherit !important;
+}
+.table,.data{
+ padding: 10px 0;
+  width: 95%;
+  margin: auto;
+}
+
+
+
+
   @media only screen and (max-width: 500px) {
    .card-client{
       width: 90% ;

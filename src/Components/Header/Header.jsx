@@ -44,21 +44,24 @@ const Header = () => {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className=" navbar-nav me-auto mb-2 mb-lg-0 text-center">
+              <ul className=" navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li className="nav-item">
-                  <Link to="main">Home</Link>
+                  <Link to="main">الصفحة الرئيسية</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="photo">Reading</Link>
+                  <Link to="photo">قراءة</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="info">Surah</Link>
+                  <Link to="info">سورة</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="juz">Juz</Link>
+                  <Link to="juz">جزء</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="prayer">مواقيت الصلاة</Link>
                 </li>
               </ul>
-              <ul className="navbar-nav ms-auto m-2 mb-lg-0 text-center">
+              <ul className=" m-2 mb-lg-0 d-flex justify-content-center">
                 <li className="nav-item">
                   <label className="theme-switch">
                     <input

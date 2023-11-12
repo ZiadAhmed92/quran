@@ -14,6 +14,7 @@ import Shikh from './Components/Shikh/Shikh';
 import Juz from './Components/Juz/Juz';
 import Juzchild from './Components/Juz/juzchild';
 import Profile from './Components/Profile/Profile';
+import PrayerTimings from './Components/PrayerTimings/PrayerTimings';
 function App() {
   const [scroll, setScroll] = useState(0);
   const [theme, colorMode] = useMode();
@@ -52,6 +53,7 @@ function App() {
     <Route path='juz' element={<Juz />} /> 
     <Route path=':id' element={<Juzchild />}/>
     <Route path='profile' element={<Profile />}/>
+    <Route path='prayer' element={<PrayerTimings />}/>
 
    
     {/* <Route path='info' element={<Info />} /> */}
