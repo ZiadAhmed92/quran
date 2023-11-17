@@ -5,7 +5,7 @@ const PrayerTimings = () => {
   const [data, setData] = useState({});
   const [dateTime, setDateTime] = useState(new Date());
   const [date, setDate] = useState("Cairo");
-  const [tm, setTm] = useState("cairo");
+  const [tm, setTm] = useState("");
   const [timeData, setTimeData] = useState("");
   async function getData() {
     let {
@@ -16,8 +16,9 @@ const PrayerTimings = () => {
     );
     
     setData(data.timings);
+    console.log(data.date.hijri.weekday.ar      )
     setTimeData(data.date.readable)
-    setTm(date);
+    setTm(data.date.hijri.weekday.ar );
     
    
   } 
@@ -71,7 +72,7 @@ const PrayerTimings = () => {
         >
           {" "}
           <h1 style={{fontSize:"5em",color:"white"}}>القاهرة</h1>
-          <h4 className="border-bottom text-white"> الجمعة {timeData}</h4>
+          <h4 className="border-bottom text-white"> {tm } {timeData}</h4>
         <div className="parent d-flex">
 
       
