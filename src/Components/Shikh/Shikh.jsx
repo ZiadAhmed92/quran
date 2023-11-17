@@ -10,9 +10,9 @@ const Shikh = ({ sora }) => {
    
 
   let navigate = useNavigate();
-  let { id, shikh } = useParams();
+  let { id, shikh,name } = useParams();
  const[sura ,setSura] =useState([])
-
+console.log(name)
   async function getSura() {
     let {
       data: { data },
@@ -61,7 +61,7 @@ const Shikh = ({ sora }) => {
         </h4>
         <audio controls autoPlay>
           <source
-            src={`https://cdn.islamic.network/quran/audio-surah/128/${shikh}/${id}.mp3`}
+            src={`https://cdn.islamic.network/quran/audio-surah/128/${name}/${id}.mp3`}
             type="audio/mp3"
           />
         </audio>

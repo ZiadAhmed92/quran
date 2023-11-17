@@ -212,7 +212,7 @@ const Quran = ({ sora, name, setName }) => {
           {name.map((item, i) => (
             <div className=" col-md-6 text-center   " key={i}>
               <div className="name-quran border py-2  my-2">
-                <Link to={`/${nameShick[i].name}/${id}`}>
+                <Link to={`/${nameShick[i].name}/${item.identifier}/${id}`}>
                   <div>{nameShick[i].name}</div>
                 </Link>
               </div>

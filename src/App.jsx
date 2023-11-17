@@ -47,7 +47,7 @@ function App() {
     
 
     </Route> 
-    <Route path=':shikh/:id' element={<Shikh  sora={sora}  />} /> 
+    <Route path=':shikh/:name/:id' element={<Shikh  sora={sora}  />} /> 
     <Route path='photo' element={<Photo sura={sura} setSura={setSura} />} />
     <Route path='info' element={<Info />} />
     <Route path='juz' element={<Juz />} /> 
