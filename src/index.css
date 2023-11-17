@@ -2,7 +2,10 @@
   color: bl;
  
  }
- 
+ body{
+  background: linear-gradient(45deg ,#240165 , #05001c) !important;
+  color: white !important;
+ }
 
  /* Scroll bar */
  ::-webkit-scrollbar {
@@ -27,7 +30,8 @@
 /* for Firefox */
  html {scrollbar-color: #9e4673 #3d4a59;} 
 
- html {scroll-behavior: smooth;}
+ html {scroll-behavior: smooth;
+ }
 
  .arrowUp{
   display: none;

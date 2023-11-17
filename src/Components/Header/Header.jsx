@@ -61,7 +61,7 @@ const Header = () => {
                   <Link to="prayer">مواقيت الصلاة</Link>
                 </li>
               </ul>
-              <ul className=" m-2 mb-lg-0 d-flex justify-content-center">
+              {/* <ul className=" m-2 mb-lg-0 d-flex justify-content-center">
                 <li className="nav-item">
                   <label className="theme-switch">
                     <input
@@ -103,7 +103,7 @@ const Header = () => {
                     </div>
                   </label>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </nav>

@@ -27,7 +27,7 @@ function App() {
 
   return (
    <>
-    <ColorModeContext.Provider
+    {/* <ColorModeContext.Provider
       // @ts-ignore
       value={colorMode}
     >
@@ -35,7 +35,7 @@ function App() {
         // @ts-ignore
         theme={theme}
       >
-        <CssBaseline />
+        <CssBaseline /> */}
 <Header/>
 
    <Routes>
@@ -72,8 +72,8 @@ function App() {
        <KeyboardArrowUpIcon  className=" fa-solid fa-arrow-up"/>  
         </div>
       </a>
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+      {/* </ThemeProvider>
+    </ColorModeContext.Provider> */}
    </>
   )
 }
