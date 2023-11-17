@@ -56,7 +56,7 @@ const Shikh = ({ sora }) => {
 
       <div className="text-center py-5  ">
         <h4 style={{textTransform:"capitalize"}}>
-        {shikh.slice(3)} : الشيخ 
+        الشيخ :  {shikh   }
           
         </h4>
         <audio controls autoPlay>
